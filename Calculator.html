@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <Zarqan class="com"></Zarqan>
+    </title>
+    <!-- <script src="script.js" defer></script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background-color: aqua; */
+            background-image: url(https://thumbs.dreamstime.com/b/hand-drawn-cartoon-doodle-numbers-seamless-pattern-color-vector-symbols-brush-calligraphy-font-randomly-scattered-mathematical-272738344.jpg);
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Full viewport height */
+        }
+
+        .body {
+            /* border: 1px solid black; */
+            height: 430px;
+            margin: 2em;
+            border-radius: 25px;
+            width: 320px;
+            background-color: rgb(63, 63, 63);
+        }
+
+        #lcd {
+            /* border: 1px solid black; */
+            width: 290px;
+            height: 70px;
+            margin: 15px 15px 0px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+
+        #lcd {
+            font-size: 40px;
+            text-indent: 5px;
+        }
+
+        #btn {
+            margin: 15px;
+            /* border: 1px solid rgb(255, 0, 0); */
+            margin-left: 20px;
+            margin-top: 30px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: 71px 71px 71px 71px;
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        #mid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+
+        .button:hover {
+            background-color: rgb(201, 201, 201);
+        }
+
+        .button:active {
+            color: white;
+        }
+
+        .button {
+            border: none;
+            margin: 5px;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+
+        .special {
+            color: orange;
+        }
+
+        .decor {
+            text-align: center;
+            font-size: 30px;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .decor:hover {
+            color: rgb(255, 0, 0);
+            transform: scale(1.1);
+            animation: zarqukaanimation;
+            transform: skewX(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="decor">Calculator by Zarqan</div>
+    <div class="container">
+
+        <div class="body">
+            <input id="lcd" readonly>
+            <div id="btn">
+                <button onclick="cleard()" class=" special button">AC</button>
+                <button class=" special button">
+                    ← </button>
+                <button onclick="appendToDisplay('%')" class=" special button">%</button>
+                <button onclick="appendToDisplay('/')" class=" special button">/</button>
+                <button onclick="appendToDisplay('7')" class="button">7</button>
+                <button onclick="appendToDisplay('8')" class="button">8</button>
+                <button onclick="appendToDisplay('9')" class="button">9</button>
+                <button onclick="appendToDisplay('*')" class=" special button">*</button>
+
+                <button onclick="appendToDisplay('4')" class="button">4</button>
+                <button onclick="appendToDisplay('5')" class="button">5</button>
+                <button onclick="appendToDisplay('6')" class="button">6</button>
+                <button onclick="appendToDisplay('-')" class=" special button">-</button>
+
+                <button onclick="appendToDisplay('1')" class="button">1</button>
+                <button onclick="appendToDisplay('2')" class="button">2</button>
+                <button onclick="appendToDisplay('3')" class="button">3</button>
+                <button onclick="appendToDisplay('+')" class=" special button">+</button>
+
+                <button onclick="appendToDisplay(',')" class=" special button">,</button>
+                <button onclick="appendToDisplay('0')" class="button">0</button>
+                <button onclick="appendToDisplay('.')" class=" special button">.</button>
+                <button onclick="calc()" style="color: white; background-color: orange;"
+                    class=" special button">=</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById("lcd");
+
+        function appendToDisplay(input) {
+            display.value += input;
+        }
+
+        function cleard() {
+            display.value = "";
+        }
+
+        function calc() {
+            display.value = eval(display.value);
+        }
+    </script>
+</body>
+
+</html>
