@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web by Zarqan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: poppins, sans-serif;
+        }
+
+        html body {
+            padding: 0px;
+            margin: 0;
+            background-color: rgb(255, 255, 255);
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+
+        nav div {
+            display: flex;
+        }
+
+        #navi ul {
+            display: flex;
+            list-style-type: none;
+            margin: 27px 90px 0px;
+            margin-left: 420px;
+        }
+
+        #navi ul li {
+            padding-left: 29px;
+        }
+
+        #im {
+            margin-left: 35px;
+        }
+
+        #upr {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 60px;
+        }
+
+        #headp {
+            font-size: 50px;
+        }
+
+        .buttono {
+            text-align: center;
+            width: 300px;
+            height: 36px;
+            font-size: 14px;
+            border-radius: 7px;
+            margin-left: 39.7%;
+            padding: 18px 0 0 0;
+            background-color: rgb(14, 176, 176);
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+        }
+
+        #rel {
+            display: flex;
+        }
+
+        #rel div {
+            margin-top: 5rem;
+            margin-left: 1.4rem;
+        }
+
+        #content {
+            display: grid;
+            width: 50%;
+            height: 65rem;
+            margin: 1.5rem;
+            margin-left: 22rem;
+        }
+
+        .box {
+            width: 200px;
+            height: 190px;
+            background-color: rgba(232, 232, 232, 0.247);
+            text-align: center;
+        }
+
+        #content div h1 {
+            font-size: 1.2rem;
+        }
+
+        .button {
+            background-color: green;
+            font-size: 0.8rem;
+            width: 9rem;
+            text-align: center;
+            position: relative;
+            color: white;
+            margin-left: 5px;
+            margin-top: 1.8rem;
+            padding: 3px;
+            opacity: 0.6;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            cursor: pointer;
+        }
+
+        .qwer {
+            font-size: 0.4rem;
+        }
+
+        #content {
+            grid-template-columns: 220px 220px 220px;
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: 2rem;
+            font-size: 13px;
+            column-gap: 5rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #content div {
+            text-wrap: wrap;
+        }
+
+        #ft {
+            width: 100%;
+            height: 15rem;
+            background-color: rgba(0, 0, 0, 0.888);
+            color: white;
+            text-align: center;
+            display: flex;
+            padding: 8em 12em;
+            margin-bottom: -16px;
+        }
+
+        #likha {
+            padding: 5em;
+            font-size: 0.7rem;
+        }
+
+        #likha p {
+            font-size: 1.2em;
+        }
+
+        .ebox {
+            box-sizing: border-box;
+            text-align: center;
+            width: 22rem;
+            height: 16rem;
+            border-radius: 10px;
+            padding: 2em 0em;
+            background-color: white;
+            color: rgba(0, 0, 0, 0.763);
+            margin-left: 10em;
+        }
+
+        .ebox h1 {
+            color: rgb(67, 165, 198);
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        #SNP {
+            background-color: rgb(67, 165, 198);
+            border: none;
+            color: white;
+            width: 19.5em;
+            border-radius: 5px;
+            margin-top: 1.2em;
+            height: 3.3em;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        #anot {
+            color: white;
+            height: 15rem;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.888);
+            margin: 0;
+            padding-left: 15em;
+            padding-bottom: 5em;
+            margin-top: 0;
+            font-size: 0.9em;
+        }
+
+        #anot h1 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        footer {
+            height: 15em;
+        }
+
+        .texet li {
+            text-align: start;
+            list-style-type: none;
+            margin-left: -42px;
+            font-size: 13px;
+        }
+
+        .abc {
+            display: flex;
+            text-align: start;
+            margin: 3em 11em;
+            margin-bottom: 0px;
+        }
+
+        .abc div {
+            text-align: center;
+            margin: 2.5em;
+        }
+
+        .abc h1 {
+            font-size: 1em;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        #mattu {
+            display: flex;
+        }
+
+        #navi ul li:hover {
+            text-decoration: underline;
+        }
+
+        .end {
+            width: 100%;
+            height: 10em;
+        }
+
+        #logo {
+            width: 400px;
+            margin-left: 410px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #logo :hover {
+            transform: scale(1.1);
+        }
+
+        .texet {
+            margin: 0;
+        }
+
+        .fox {
+            margin: 0px;
+            border: 1px solid;
+            width: 170px;
+            height: 14px;
+            border-radius: 5px;
+            padding: 5px;
+            padding-bottom: 15px;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav>
+        <div id="im">
+            <img src="ue.png" height="80px" alt="">
+            <h1 style="margin: 25px 15px;">UltraEdit</h1>
+        </div>
+        <div id="navi">
+            <ul>
+                <li>Products</li>
+                <li>Pricing</li>
+                <li>Resource</li>
+                <li>About us</li>
+                <li>Security and compliances <img style="width: 20px; padding-left: 20px; height: 20px;"
+                        src="https://img.icons8.com/?size=100&id=12515&format=png&color=000000" alt=""></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="upr">
+        <p id="headp">Download <strong>UltraEdit</strong> for Window <img height="50px"
+                style="transform: translateY(10px);" width="50px" src="ue.png" alt=""></p>
+        <p>Download and try UltraEdit before you buy it! This download includes the full Windows <br>version of the text
+            editor.</p>
+    </div>
+    <div class="buttono">
+        DOWNLOAD MAC OR LINUX VERSION
+    </div>
+    <div id="rel">
+        <img style="margin-left: 15rem; margin-top: 4rem;" src="ue.png" alt="">
+        <div> <span style="font-size: 22px; font-weight: 400;">Download UltraEdit</span><span style="font-size: 13px;">
+                v2024.0(released 2024-04-19) | Hotfix</span></div>
+    </div>
+    <div id="content">
+        <div class="box">
+            <h1>English</h1>
+            English <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>Deutsch</h1>
+            German <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>Italiano</h1>
+            Italian <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>Español</h1>
+            Spanish <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>français</h1>
+            French <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>Português</h1>
+            Portugues <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>日本</h1>
+            Japanese <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>한국어</h1>
+            Korean <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>中国</h1>
+            Chinese <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+        <div class="box">
+            <h1>中國</h1>
+            Traditional Chinese <br>
+            <input class="button" type="button" value="Download 64-bit"><br>Sha256<br>
+            <p class="qwer">AA32582D4736B5A5CB3C4D57C670C8BCDE76C1F93058<br>EB8BAC11AB8DC5C08EB2</p>
+        </div>
+    </div>
+    <div id="ft">
+        <div id="likha">
+            <h1>Join the UltraEdit newsletter</h1>
+            <p>Sign up for our newsletter and receive emails for the latest<br>news,blogs, and special deals on
+                UltraEdit.</p>
+        </div>
+        <div class="ebox">
+            <h1>Subcribe to our emails</h1>
+            Enter email address <br>
+            <input style="border-color: rgba(0, 0, 0, 0.137); width: 21em; height: 3.3em;" type="email" name="" id="">
+            <input id="SNP" type="submit" value="SIGN UP">
+        </div>
+        <br>
+    </div>
+    <div id="anot">
+        <h1>EXE or MSI?</h1>
+        <pre>The EXE builds of our products are the preferred download for most of our users, running Windows 8.1 and later.
+
+We make MSI builds available for bulk or silent deployments (command line, GPO, SCCM, etc.). <a style="color: rgb(117, 203, 231); text-decoration: none;" href="#">Get the UltraEdit MSI installer.</a></pre>
+        <h1>Free trial period</h1>
+        <pre>This application comes with a free, fully functional 30 day trial period. After the trial period expires, you must <a style="color: rgb(117, 203, 231); text-decoration: none;" href="#">purchase a license </a>to<br>continue using it.</pre>
+    </div>
+    <footer>
+        <div class="abc">
+            <div class="texet">
+                <h1>What’s your language?</h1>
+                <ul>
+                    <li>Code editor(General)</li>
+                    <li>Text editor</li>
+                    <li>Hex/Binary</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Unix shell script</li>
+                    <li>PL/SQL</li>
+                    <li>EDI</li>
+                    <li>C++</li>
+                    <li>PHP</li>
+                    <li>XMl</li>
+                    <li>Markdown</li>
+                    <li>SAS</li>
+                    <li>Visual basic (VB)</li>
+                </ul>
+            </div>
+            <div class="texet">
+                <h1>What type of user are you?</h1>
+                <ul>
+                    <li>Programmer / Developer</li>
+                    <li>Web Developer</li>
+                    <li>Database Manager</li>
+                    <li>System Administrator</li>
+                    <li>Technical Writer</li>
+                    <li>Editor / Publisher</li>
+                    <li>Medical / Pharmaceutical</li>
+                </ul>
+            </div>
+            <div class="texet">
+                <h1>General</h1>
+                <ul>
+                    <li>Contact</li>
+                    <li>license Agreement (EULA)</li>
+                    <li>End of Life Policy</li>
+                    <li>Library and Patents</li>
+                    <li>information Policy</li>
+                    <li>Privacy Policy</li>
+                    <li>Unstall Instruction</li>
+                    <li>Sitemap</li>
+                    <li>Legal</li>
+                    <li>Software Security</li>
+                </ul>
+            </div>
+            <div class="texet">
+                <h1>Subscribe to Newsletter</h1>
+                <ul>
+                    <li>Get the latest news on new <br>releases, event, and developments.</li>
+                </ul>
+                <div style="font-size: 12.8px;transform:translateX(9px); padding-top: 9px; color: rgba(0, 0, 0, 0.493);"
+                    class="fox">Enter email address...</div>
+                <div style="background-color: rgb(67, 165, 198);padding-bottom: 18px;
+                padding-top: 9px; font-weight: 500; color: white; transform: translateY(-30px);" class="fox">SUBSCRIBE
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="margin-left: 13rem;" class="end">
+                <div id="mattu">
+                    <img src="ue.png" alt="">
+                    <h1 style="font-size: 1.5em;letter-spacing: 1px;">UltraEdit</h1>
+                    <div id="logo">
+                        <i class='bx bxl-twitter'></i>
+                        <i class='bx bxl-github'></i>
+                        <i class='bx bxl-youtube'></i>
+                        <i class='bx bxl-facebook'></i>
+                        <i class='bx bxl-instagram'></i>
+                        <i class='bx bxl-linkedin-square'></i>
+                        <i class='bx bxl-reddit'></i>
+                    </div>
+                </div>
+                <p style="font-size:0.7em; margin-top: 1.2em; letter-spacing: 0.1px;">©2024 UltraEdit. All rights
+                    reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
