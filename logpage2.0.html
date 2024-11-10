@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarqan.com</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/041/601/775/original/ida-franzen-karlsson-background-animation.gif?1632167232);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+span {
+    font-size: 13px;
+}
+
+.nomid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    background-color: rgba(113, 255, 248, 0.224);
+    backdrop-filter: blur(5px);
+    width: 22rem;
+    min-width: 22rem;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(164, 164, 164, 0.689);
+}
+
+.value::placeholder {
+    color: rgba(0, 0, 0, 0.562);
+    padding-left: 15px;
+}
+
+.value {
+    width: 100%;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.557);
+    border: 2px solid rgba(128, 128, 128, 0.55);
+}
+
+#btn {
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.557);
+    border: 1px solid rgba(128, 128, 128, 0.55);
+    margin: 5px 0;
+}
+
+#btn:hover {
+    background-color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+#btn:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+i {
+    color: white;
+    transform: translateY(16px);
+    margin-left: 10px;
+}
+
+h1{
+    color: white;
+}
+
+.set {
+    display: flex;
+}
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h1 style="text-align: center;">Login</h1>
+            <div>
+                <div class="set">
+                    <input type="email" placeholder="Username" class="value">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="set">
+                    <input type="password" placeholder="Password" class="value">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+            </div>
+            <div class="nomid">
+                <span><input type="checkbox" id=""> Remember me</span>
+                <span><a href="#">forget password</a></span>
+            </div>
+            <input type="submit" id="btn" value="Login">
+            <div style="text-align: center;">
+                <span>Don't have an account ?</span> <span><a href="#">Register</a></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
