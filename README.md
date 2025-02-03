@@ -1,1 +1,1 @@
-All files are embedded with CSS and JS download watch my projects
+All files are embedded with CSS and JS download and watch my projects
