@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Stone Paper Scissors</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-wrap: nowrap;
+            font-family: poppins, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(76, 255, 76);
+            box-shadow: 0px 0.1px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav>h2 {
+            padding: 0 15px;
+        }
+
+        #mySpan {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        #stone {
+            color: rgba(101, 101, 101, 0.902);
+        }
+
+        #paper {
+            color: rgb(255, 255, 255);
+        }
+
+        .main {
+            padding: 0px 15px;
+        }
+
+        #sciss {
+            color: rgba(0, 117, 0, 0.831);
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(164, 255, 164);
+        }
+
+        .oppo {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .my {
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo>.btn {
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            margin: 10px 15px;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .btn:active {
+            box-shadow: 0px 0px 10px green;
+        }
+
+        .b1 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtGvhi2TWZsv106_gmNKI7abRyO8HFZzTGZg&s);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .b2 {
+            background-image: url(data:image/jpeg;base64,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);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .b3 {
+            background-image: url(data:image/png;base64,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);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .choi {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .versus {
+            height: min-content;
+            padding: 20px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .win {
+            text-align: center;
+            color: green;
+        }
+
+        .op {
+            text-align: center;
+            width: 200px;
+            height: 50px;
+        }
+
+        .me {
+            text-align: center;
+            width: 200px;
+            height: 50px;
+        }
+
+        @media only screen and (max-width: 450px) {
+            .photo {
+                display: flex;
+                flex-direction: column;
+                height: min-content;
+            }
+
+            .mid {
+                margin-bottom: 30%;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .z {
+            text-align: center;
+            font-weight: 500;
+            color: rgb(33, 133, 33);
+            margin-top: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h2 id="stone">STONE</h2>
+            <h2 id="paper">PAPER</h2>
+            <h2 id="sciss">SCISSORS</h2>
+        </nav>
+        <div class="main">
+            <div class="mid">
+                <div class="oppo">
+                    <h2 style="margin-right: 20px;">Opponent choose : </h2>
+                    <span id="mySpan">Stone</span>
+                </div>
+                <div class="versus">
+                    <div class="me">
+                        <span>Your choice</span>
+                        <h1 id="meSpan">Stone</h1>
+                    </div>
+                    <h2 style="margin: 0 20px;">VS</h2>
+                    <div class="op">
+                        <span>Opponent choice</span>
+                        <h1 id="oppoSpan">Stone</h1>
+                    </div>
+                </div>
+                <div class="win">
+                    <h2 id="winner">You Win</h2>
+                </div>
+            </div>
+            <div class="my">
+                <h3>Please select one of your choice</h3>
+                <div class="photo">
+                    <input id="changeContentButton" class="btn b1" type="button" value="">
+                    <input id="changeContentButton2" class="btn b2" type="button" value="">
+                    <input id="changeContentButton3" class="btn b3" type="button" value="">
+                </div>
+            </div>
+        </div>
+        <a class="z" href="https://www.instagram.com/its_zarqu?igsh=MWdhcGlwOWd1dTd3OQ==">
+            <p class="z">Made by Zarqan</p>
+        </a>
+    </div>
+    <script>
+        const arr = ['Stone ', 'Paper ', 'Scissor ', 'Stone', 'Paper', 'Scissor'];
+        var span = document.querySelector('#mySpan');
+        var button = document.querySelector('#changeContentButton');
+        var button2 = document.querySelector('#changeContentButton2');
+        var button3 = document.querySelector('#changeContentButton3');
+
+        var opch = document.querySelector('#oppoSpan');
+        var mech = document.querySelector('#meSpan');
+
+        var winn = document.querySelector('#winner');
+
+
+        button.addEventListener('click', function () {
+            let ran = Math.floor(Math.random() * 6)
+            span.textContent = arr[ran];
+            opch.textContent = arr[ran];
+            mech.textContent = 'Stone';
+            if (ran == 2 || ran == 5) {
+                winn.textContent = 'You Win'
+                winn.style.color = "green"
+            }
+            else if (ran == 0 || ran == 3) {
+                winn.textContent = 'Round Draw'
+                winn.style.color = "gray"
+            }
+            else {
+                winn.textContent = 'You Lose'
+                winn.style.color = "red"
+            }
+        });
+        button2.addEventListener('click', function () {
+            let ran = Math.floor(Math.random() * 6)
+            span.textContent = arr[ran];
+            opch.textContent = arr[ran];
+            mech.textContent = 'Paper';
+            if (ran == 0 || ran == 3) {
+                winn.textContent = 'You Win'
+                winn.style.color = "green"
+
+            }
+            else if (ran == 1 || ran == 4) {
+                winn.textContent = 'Round Draw'
+                winn.style.color = "gray"
+            }
+            else {
+                winn.textContent = 'You Lose'
+                winn.style.color = "red"
+            }
+        });
+        button3.addEventListener('click', function () {
+            let ran = Math.floor(Math.random() * 6)
+            span.textContent = arr[ran];
+            opch.textContent = arr[ran];
+            mech.textContent = 'Scissor';
+            if (ran == 1 || ran == 4) {
+                winn.textContent = 'You Win'
+                winn.style.color = "green"
+
+            }
+            else if (ran == 2 || ran == 5) {
+                winn.textContent = 'Round Draw'
+                winn.style.color = "gray"
+            }
+            else {
+                winn.textContent = 'You Lose'
+                winn.style.color = "red"
+            }
+        });
+    </script>
+</body>
+
+</html>
